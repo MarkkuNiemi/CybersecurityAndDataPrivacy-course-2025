@@ -8,3 +8,4 @@
 | 7.11.2025 | 1,5 | Introduction to the PortSwigger environment | Watched the lecture  |
 | 8.11.2025 | 5 | PortSwigger environment | Creating account. Getting to know the subject SQL-injection and Authentication. 2 labs from SQL-injections and 2 labs from Authentication  |
 | 9.11.2025 | 2,5 | PortSwigger environment, Task 3 | Getting to know the subject Access control vulnerabilities. 2 labs from Access control vulnerabilities. Reflection of the labs done and returning Task 3 |
+| 14.11.2025 | 2 | Intro to penetration testing -lecture | Wached the lecture. Getting more familiar with the Phase 1 task |
