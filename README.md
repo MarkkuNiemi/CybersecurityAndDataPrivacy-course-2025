@@ -9,3 +9,4 @@
 | 8.11.2025 | 5 | PortSwigger environment | Creating account. Getting to know the subject SQL-injection and Authentication. 2 labs from SQL-injections and 2 labs from Authentication  |
 | 9.11.2025 | 2,5 | PortSwigger environment, Task 3 | Getting to know the subject Access control vulnerabilities. 2 labs from Access control vulnerabilities. Reflection of the labs done and returning Task 3 |
 | 14.11.2025 | 2 | Intro to penetration testing -lecture | Watched the lecture. Getting more familiar with the Phase 1 task |
+| 15.11.2025 | 3 | Pen-test environment setup | Installed Debian VM and set up Docker + Compose for Phase 1 testing |
