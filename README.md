@@ -10,3 +10,4 @@
 | 9.11.2025 | 2,5 | PortSwigger environment, Task 3 | Getting to know the subject Access control vulnerabilities. 2 labs from Access control vulnerabilities. Reflection of the labs done and returning Task 3 |
 | 14.11.2025 | 2 | Intro to penetration testing -lecture | Watched the lecture. Getting more familiar with the Phase 1 task |
 | 15.11.2025 | 3 | Pen-test environment setup | Installed Debian VM and set up Docker + Compose for Phase 1 testing |
+| 16.11.2025 | 3 | The Booking system project Phase 1 Part 1, Pen-testing  | Installing needed components (ZAP, Java17..) Done Pen-testing for The Booking system project Phase 1 Part 1. ZAP report.|
