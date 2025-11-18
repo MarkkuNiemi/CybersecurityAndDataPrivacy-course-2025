@@ -24,7 +24,8 @@
   - Performance testing / load testing
   - DoS attack
     
-- Test approach: Gray-box
+- Test approach:
+  - Gray-box
 
 **Test environment & dates:**  
 - Start:  15.11.2025
@@ -47,19 +48,21 @@
 - External services, login flow and reservation logic were excluded from this phase
 
 ---
-***KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN******KESKEN***
+
 # 2️⃣ Executive Summary
 
 **Short summary (1-2 sentences):**  
+Booking System's registration functionality was tested with manual methods and with automated ZAP scanning. Several security issues, including unauthorized role choices and plaintext password storage, along with several input validation issues and error-handling problems were found rangign from high to low.
 
 **Overall risk level:** (Low / Medium / High / Critical)
+- High
 
 **Top 5 immediate actions:**  
-1.  
-2.  
-3.  
-4.  
-5.  
+1.  Remove ability to choose the role of the user in registration sheet. This should be handled from backend.
+2.  Add proper password hashing and avoid storing any credentials in plaintesxt.
+3.  Add backend validation for all form inputs (email. password strength, birthdate checking to make sure user is atleast 15yr)
+4.  Fix error handling to avoid 500 Internal Server Errors and avoid leaking database information.
+5.  Add security headers (CSP,X-Frame-Options, X-Content-Type-Options).
 
 ---
 
@@ -81,9 +84,11 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 High | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result |
-| F-02 | 🟠 Medium | Session fixation | Session ID remains unchanged after login | Burp log or response headers |
-| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "12345" | Screenshot of registration success |
+| F-01 | 🔴 High | Unauthorized admin role creation | Registration allows user to create "Administrator" account without backend validation enabling privilege escalation during account creation. | Screenshot <img width="1277" height="809" alt="SQL" src="https://github.com/user-attachments/assets/346b6262-14e8-4037-8485-9f10fc3c649b" />|
+| F-02 | 🔴 High  | Passwords stored in plaintext | All passwords are sre stored in plaintext in database. There should be some kind of hashing or encryption ude. Exposing credentials directly | See screenshot in F-01 |
+| F-03 | 🟠 Medium | Missing age verification | There is no birthdate verification. Users below age 15 can register to the web software | See screenshot in F-01 |
+| F-04 | 🟠 Medium | 500 Internal Server Error reveals database detalis | Invalid or unexpected input (e.g., missing or modified role value) causes the backend to crash with a 500 Internal Server Error. The error message exposes internal database structure, including table names and constraint names (booking_users_role_check, booking_users_username_key). This information disclosure widens the attack surface and indicates missing backend validation and insufficient error handling. | Screenshots  <img width="1275" height="809" alt="Erroreita1" src="https://github.com/user-attachments/assets/6671189b-c5a9-431d-b567-b46ee7d55252" /> <img width="1277" height="809" alt="Erroreita2" src="https://github.com/user-attachments/assets/2389b1c3-ef4e-438f-bc8d-8596304e685d" />|
+| F-05 | 🟡 Low | Missing security headers | No CSP, X-Frame-Options or X-Content-Type-Options headers are present, reducing baseline protection against clickjacking and content-type attacks. | See the ZAP report |
 
 ---
 
