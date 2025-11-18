@@ -119,5 +119,6 @@ Booking System's registration functionality was tested with manual methods and w
 ---
 > [!NOTE]
 > 📁 **Attach full report:** → `check itslearning` → **Add a link here**
+  - ZAP report link: [OWASP ZAP Report](./zap_report_round1.md)
 
 ---
