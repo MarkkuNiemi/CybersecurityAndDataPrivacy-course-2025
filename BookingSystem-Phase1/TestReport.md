@@ -101,24 +101,9 @@ Booking System's registration functionality was tested with manual methods and w
 # 5️⃣ OWASP ZAP Test Report (Attachment)
 
 **Purpose:**  
-- Attach or link your OWASP ZAP scan results (Markdown format preferred).
+A full OWASP ZAP automated scan was executed against the registration page to detect common vulnerabilities such as injection, missing security headers, and path traversal.  
+The complete scan report is attached below.
 
----
-
-**Instructions (CMD version):**
-1. Run OWASP ZAP baseline scan:  
-   ```bash
-   zap-baseline.py -t https://example.com -r zap_report_round1.html -J zap_report.json
-   ```
-2. Export results to markdown:  
-   ```bash
-   zap-cli report -o zap_report_round1.md -f markdown
-   ```
-3. Save the report as `zap_report_round1.md` and link it below.
-
----
-> [!NOTE]
-> 📁 **Attach full report:** → `check itslearning` → **Add a link here**
-  - ZAP report link: [OWASP ZAP Report](./zap_report_round1.md)
+🔗 **OWASP ZAP Report:** [zap_report_round1.md](./zap_report_round1.md)
 
 ---
