@@ -13,4 +13,4 @@
 | 16.11.2025 | 3 | The Booking system project Phase 1 Part 1, Pen-testing  | Installing needed components (ZAP, Java17..) Done Pen-testing for The Booking system project Phase 1 Part 1. ZAP report.|
 | 17.11.2025 | 2 | The Booking system project Phase 1 Part 1  | Running SQL injection tests again to make findings sure. Making test report (Introduction) |
 | 18.11.2025 | 2,5 | The Booking system project Phase 1 Part 1  | Writing test report, evaluating findings with chatGPT. Submitting The Booking system project → Phase 1 → Part 1  |
-| 23.11.2025 | 2,5 | The Booking system project Phase 1 Part 2  | Repeating part1 tests to the new BookingSystems -web application. Generating ZAP report |
+| 23.11.2025 | 6 | The Booking system project Phase 1 Part 2  | Repeating part1 tests to the new BookingSystems -web application. Generating ZAP report. Watching the lecture considering the topic. Creating report in the discussion area. Uploading files to Github and submitting the Phase 1 Part 2. |
