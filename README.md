@@ -15,3 +15,4 @@
 | 18.11.2025 | 2,5 | The Booking system project Phase 1 Part 1  | Writing test report, evaluating findings with chatGPT. Submitting The Booking system project → Phase 1 → Part 1  |
 | 23.11.2025 | 6 | The Booking system project Phase 1 Part 2  | Repeating part1 tests to the new BookingSystems -web application. Generating ZAP report. Watching the lecture considering the topic. Creating report in the discussion area. Uploading files to Github and submitting the Phase 1 Part 2. |
 | 26.11.2025 | 4 | The Booking system project Phase 2  | Watched lecture about phase 2 and password cracking lecture. Did ZAP report round3, installed Hashcat etc and cracked 1 password out of 5 |
+| 27.11.2025 | 2,5 | The Booking system project Phase 2  | Cracked 5 passwords out of 5. Returned assignment |
