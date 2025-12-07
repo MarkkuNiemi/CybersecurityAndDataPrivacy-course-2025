@@ -27,7 +27,7 @@ Käyttäjäroolit:
 
 ### Huomio
 Tuntemattomat endpointit palauttavat aina:
-`HTTP 303 → status.html`, eivät 404-koodia.  
+`HTTP 303 status.html`, eivät 404-koodia.  
 Hakemisto- tai API-fuzzauksella ei voi löytää piilotettuja reittejä.
 
 ---
@@ -48,4 +48,36 @@ Hakemisto- tai API-fuzzauksella ei voi löytää piilotettuja reittejä.
 **Havaittu ongelma:**
 - Guest pystyy näkemään muiden tekemiä varauksia suoraan etusivulta  (**IDOR-haavoittuvuus**)
 
+### Reserver (peruskäyttäjä)
+**Can do:**
+- Kirjautua ja tehdä varauksia
+- Näyttää resurssit
+- Voi luoda resursseja
+  
+**Cannot do:**
+- Käyttäjien poisto
+- Muiden kuin omien resurssien hallinta
+
+**Havaitut ongelmat:**
+- Reserver näkee kaikkien käyttäjien varaukset etusivulla. **Tietosuojan rikkominen**
+- Reserver voi luoda uusia resursseja. **Ei roolien mukaista**
+- Reserver voi myös hakea kenen tahansa varauksia ID:llä. **IDOR**
+
+### Admin (ylläpitäjä)
+**Odotus spekseissä:** Lisätä/poistaa/muokata resursseja ja varauksia, hallita käyttäjiä.
+
+**Todellinen toiminnallisuus:**
+- Adminilla ei ole erillistä näkymää tai toiminnallisuutta
+- Admin pystyy kirjautumaan sisään ja tekemään varauksia kuten tavallinen käyttäjä.
+- Admin pystyy varaamaan resursseja ja hallitsemaan muiden varauksia.
+- Admin ei pysty hallinnoimaan käyttäjiä.
+- Admin ei pysty poistamaan resursseja
+
+**Havaitut ongelmat:**
+- Admin-rooli ei ole toteutettu spesifikaation edellyttämällä tavalla.  
+  Käytännössä rooli on lähes sama kuin peruskäyttäjällä, muutamalla lisäoikeudella.
+- Varsinaisia admin-päätepisteitä ei ole olemassa, ja UI ei tarjoa hallintatoimintoja.
+  
 ---
+
+## 4. Gobuster ja Wfuzz -testauksen tulokset
