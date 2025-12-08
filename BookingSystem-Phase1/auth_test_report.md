@@ -117,7 +117,7 @@ Tämä tarkoittaa:
   
 ---
 
-## 5. ZAP, yhteenveto
+## 5. ZAP-testauksen tulokset
 
 ZAP-skannaus suoritettiin sovelluksen tunnistettujen sivujen ja API-kutsujen analysoimiseksi. Skannauksen tavoitteena oli löytää piilotettuja endpointteja, tarkastaa autorisoinnin toteutus ja havaita mahdollisia syötehaavoittuvuuksia.
 
