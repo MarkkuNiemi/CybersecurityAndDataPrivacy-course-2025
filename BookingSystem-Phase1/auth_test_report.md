@@ -81,3 +81,50 @@ Hakemisto- tai API-fuzzauksella ei voi löytää piilotettuja reittejä.
 ---
 
 ## 4. Gobuster ja Wfuzz -testauksen tulokset
+### Gobuster
+Gobusterilla tehty hakemisto- ja tiedostohaku ei tuottanut yhtään todellista lisäpolkua.
+ChatGPT:n avulla syyksi ilmeni seuraavat tekijät:
+- Kaikki tuntemattomat URL-osoitteet palauttavat saman `HTTP 303` -uudelleenohjauksen.
+- Sovellus ei koskaan palauta `404 Not Found` -vastetta.
+
+Tämän vuoksi Gobuster näytti löytävän suuren määrän vääriä positiivisia tuloksia, jotka olivat kaikki samaa 303-uudelleenohjausta. Todellisia, olemassa olevia polkuja ei löytynyt.  
+**Johtopäätös:** Sovelluksessa ei ole piilotettuja hakemistoja tai endpointteja, eikä Gobusterin avulla voi löytää uusia reittejä tästä sovelluksesta.
+
+### Wfuzz
+#### Yleiset endpointit
+Myös Wfuzz palautti lähes kaikista poluista identtisen 303-uudelleenohjauksen.  
+Koska sovellus ei erottele virheellisiä ja oikeita URL-osoitteita HTTP-statuskoodeilla, Wfuzz ei pystynyt tunnistamaan todellisia reittejä.
+
+**Johtopäätös:** Wfuzz ei löytänyt piilotettuja sivuja tai API-päätepisteitä, koska sovellus ei anna tarkoituksenmukaisia virhekoodeja (404).
+
+#### API-idarointi, IDOR (Insecure Direct Object Reference)
+Testissä haettiin `/api/reservations/{id}` eri ID-arvoilla.  
+Tulos:
+- Varaus-ID:t 3 ja 5 palauttivat `HTTP 200` -vastauksen.
+- Pyyntö onnistui ilman kirjautumista.
+
+Tämä tarkoittaa:
+- Varaustietoja voi lukea pelkän ID:n perusteella  
+- Autorisointia ei tarkasteta backendissä  
+- Kyseessä on vakava IDOR -haavoittuvuus
+
+**Johtopäätös:** Varausten yksittäinen hakeminen on täysin suojaamatonta, ja mikä tahansa käyttäjä (myös Guest) voi lukea muiden varauksia, jos arvaa ID:n. Tämä on sovelluksen suurin tietoturvapuutteista.
+
+### Yhteenveto
+- Sovellus ei palauta 404-koodia → fuzzing-työkalut eivät löydä piilotettuja polkuja  
+- Gobuster ja Wfuzz eivät tunnistaneet uusia endpointteja   
+- ID-fuzzing paljasti merkittävän autorisointivirheen (IDOR)
+  
+---
+
+## 5. Loppuyhteenveto
+Testauksen perusteella Booking System (Phase 3) -sovelluksessa on useita vakavia autorisointiin ja tietosuojaan liittyviä puutteita.  
+Merkittävin löydös on IDOR-haavoittuvuus, jonka vuoksi kuka tahansa voi hakea varausten sisältöä ilman kirjautumista. Lisäksi kaikki varaukset näkyvät etusivulla käyttäjästä riippumatta, mikä rikkoo GDPR:n vaatimusta henkilötietojen minimoinnista.
+
+Admin-rooli on toteutettu vain osittain eikä vastaa järjestelmän spesifikaatioita. Admin ei voi hallita käyttäjiä ja resurssien hallinta on vajaa (voi vain lisätä), eikä backendissä ole roolipohjaista autorisointia.  
+Reserver-rooli taas sisältää liikaa oikeuksia (kuten resurssien luonnin), eikä estä muiden varausten tarkastelua.
+
+Fuzzing-työkalut eivät löytäneet uusia endpointteja, koska sovellus ei palauta 404-koodeja. Niiden avulla löydetty IDOR vahvisti kuitenkin, että backend ei tee asianmukaisia autorisointitarkastuksia.
+
+Sovellus ei tällä hetkellä täytä Privacy by Design -periaatteita eikä asiakkaan vaatimuksia. Autorisointi vaatii merkittävän uudistuksen sekä UI- että API-tasolla.
+
