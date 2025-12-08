@@ -1,6 +1,6 @@
 # Authorization Testing Report, Booking System (Phase 3)
 
-## 1. Overview
+## 1. Johdanto
 Tässä raportissa käsitellään Booking System -sovelluksen autorisointiin liittyvää testaamista kolmella eri käyttäjäroolilla. Testaus sisälsi myös käyttöliittymätestausta, API-pyynnöllä tehtäviä kokeiluja, sekä Gobuster, Wfuzz ja ZAP työkaluilla tehtyjä testauksia.
 
 Käyttäjäroolit:
