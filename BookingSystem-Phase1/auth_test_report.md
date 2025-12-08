@@ -117,7 +117,18 @@ Tämä tarkoittaa:
   
 ---
 
-## 5. Loppuyhteenveto
+## 5. ZAP, yhteenveto
+
+ZAP-skannaus suoritettiin sovelluksen tunnistettujen sivujen ja API-kutsujen analysoimiseksi. Skannauksen tavoitteena oli löytää piilotettuja endpointteja, tarkastaa autorisoinnin toteutus ja havaita mahdollisia syötehaavoittuvuuksia.
+
+ZAP ei löytänyt uusia tai piilotettuja reittejä. Kaikki tuntemattomat URL-osoitteet johtavat 303-uudelleenohjaukseen, mikä estää ZAPia tunnistamasta todellisia virhekoodeja. ZAPin havainnot tukevat manuaalista testausta: backend ei tee selkeitä roolipohjaisia tarkistuksia, ja osa API-pyynnöistä vaikuttaa palauttavan sisältöä ilman kunnollista autorisointia. ZAP ei havainnut XSS-, SQL Injection- tai muita syötteen käsittelyyn liittyviä haavoittuvuuksia.
+
+Täydellinen ZAP-raportti löytyy tiedostosta **zap_report_round4.md**.
+[Katso ZAP-raportti](./zap_report_round4.md)
+
+---
+
+## 6. Loppuyhteenveto
 Testauksen perusteella Booking System (Phase 3) -sovelluksessa on useita vakavia autorisointiin ja tietosuojaan liittyviä puutteita.  
 Merkittävin löydös on IDOR-haavoittuvuus, jonka vuoksi kuka tahansa voi hakea varausten sisältöä ilman kirjautumista. Lisäksi kaikki varaukset näkyvät etusivulla käyttäjästä riippumatta, mikä rikkoo GDPR:n vaatimusta henkilötietojen minimoinnista.
 
