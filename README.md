@@ -18,3 +18,4 @@
 | 27.11.2025 | 2,5 | The Booking system project Phase 2  | Cracked 5 passwords out of 5. Returned assignment |
 | 6.12.2025 | 2,5 | The Booking system project Phase 3  | Watched "Intro to authorization" -lecture. Getting familiar with Phase 3 assignment. |
 | 7.12.2025 | 7 | The Booking system project Phase 3  | Testing Phase 3 website according to the task, ZAP report, making authentication report |
+| 8.12.2025 | 2 | The Booking system project Phase 3  | Going through findings. Finishing authentication report and submitting the task |
