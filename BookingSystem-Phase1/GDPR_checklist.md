@@ -3,7 +3,7 @@
 | **Result** | **Personal data mapping and minimization** |
 | :----: | :--- |
 | &nbsp;⚠️&nbsp; | Collected information is presented for the user, but there isn't any documetnation for what use these informations are collected. |
-| &nbsp;✅/⚠️&nbsp; | The personal data that is collected is minimal for the usage of the web application. However if this needs to be documented and presented to user clearly, then it results in "*Attention*" |
+| &nbsp;✅ OR ⚠️&nbsp; | The personal data that is collected is minimal for the usage of the web application. However if this needs to be documented and presented to user clearly, then it results in "*Attention*" |
 | &nbsp;⚠️&nbsp; | Birthdate field exists and web application ensures that user is over 15 years old. Nevertheless it does not explain the need of this data collection for user nor the need to be over 15 years old. |
 
 ---
@@ -58,17 +58,17 @@
 
 | **Result** | **Data subject rights** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Can users download or request all personal data related to them (data access request)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there an interface or process for users to request the deletion of their personal data? |
-| &nbsp;✅/❌/⚠️&nbsp; | Can users withdraw their consent for data processing? |
+| &nbsp;❌&nbsp; | There is no feature in application for user to download own personal data. |
+| &nbsp;❌&nbsp; | There is no possibility to request deletion of users personal data. |
+| &nbsp;❌&nbsp; | The application does not collect GDPR-compliant consent for data processing, and therefore users cannot withdraw it. |
 
 ---
 
 | **Result** | **Documentation and communication** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a privacy policy available to users during registration and easily accessible? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are administrators and developers provided with documented data protection practices <br>and processing activities? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? |
+| &nbsp;❌&nbsp; | Privacy policy page exists, but is entirely blank. |
+| &nbsp;❌&nbsp; | The system provides no documentation for administrators or developers regarding data protection practises or process activities. |
+| &nbsp;❌&nbsp; | There is no documented process for responding to data breaches. |
 
 ---
 
