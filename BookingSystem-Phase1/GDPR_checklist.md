@@ -28,31 +28,31 @@
 | :----: | :--- |
 | &nbsp;❌&nbsp; | Resources can be created by any user and reservations can be modified by any user, including other users than the reserver of the reservation. |
 | &nbsp;✅&nbsp; | Role-based access control is implemented. |
-| &nbsp;✅/❌/⚠️&nbsp; | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? |
+| &nbsp;⚠️&nbsp; | Administrator privileges are technically very limited, there is no user control panel and for this no user data is visible for admin. There is no documetnation describing data acces rules or restrictions.  |
 
 ---
 
 | **Result** | **Privacy by Design Principles** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Has Privacy by Default been implemented (e.g., collecting the minimum data by default)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are logs implemented without unnecessarily storing personal data? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are forms and system components designed with data protection in mind<br> (e.g., secured login, minimal fields)? |
+| &nbsp;⚠️&nbsp; | Minimal fields are collected, but processing transparency is lacking. |
+| &nbsp;❌&nbsp; | Ther is no documentation what data the system is collecting, how long it is retained or is personal data excluded from logs. Because GDPR requires transparency and data minimization also for log data, this requirement is not fulfilled. |
+| &nbsp;⚠️&nbsp; | The forms collect only minimal required data and and it is not visible in UI. However there is no documentation of Privacy by Design practises. Also the application does not provide information about secure data handling or protection mechanisms |
 
 ---
 
 | **Result** | **Data security** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Are CSRF, XSS, and SQL injection protections implemented? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are passwords securely hashed using a strong algorithm (e.g., bcrypt, Argon2)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are data backup and recovery processes GDPR-compliant? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is personal data stored in data centers located within the EU? |
+| &nbsp;⚠️&nbsp; | The application does not provide documentation about CSRF, XSS or SQL injection protections. Without security documentation, GDPR safeguard requirements cannot be confirmed. Technically from ZAP report we can see there is no vulnerability. |
+| &nbsp;⚠️&nbsp; | Passwords are securely stored using the BCrypt hashing as seen from the database. However, the application does not document its password protection practises in the Privacy POlicy or Terms of Service.  |
+| &nbsp;❌&nbsp; | The application provides no information about data backup or recovery processes. GDPR requires documented policies describing how personal data is backed up, how long it is retained, where it is stored (EU/EEA), and how restoration procedures protect individuals’ data. |
+| &nbsp;❌&nbsp; | The application does not provide information about where personal data is stored. |
 
 ---
 
 | **Result** | **Data anonymization and pseudonymization** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Is personal data anonymized where possible? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are pseudonymization techniques used to protect data while maintaining its utility? |
+| &nbsp;❌&nbsp; | No anonymization is implemented on personal data. |
+| &nbsp;❌&nbsp; | No pseudonymization techniques used to protect data. All personal data remains directly identifiable. |
 
 ---
 
