@@ -2,32 +2,32 @@
 
 | **Result** | **Personal data mapping and minimization** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Have all personal data collected and processed in the system been<br> identified? (e.g., name, email, age, username) |
-| &nbsp;✅/❌/⚠️&nbsp; | Have you ensured that only necessary personal data is collected (data minimization)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is user age recorded to verify that the booker is over 15 years old? |
+| &nbsp;⚠️&nbsp; | Collected information is presented for the user, but there isn't any documetnation for what use these informations are collected. |
+| &nbsp;✅/⚠️&nbsp; | The personal data that is collected is minimal for the usage of the web application. However if this needs to be documented and presented to user clearly, then it results in "*Attention*" |
+| &nbsp;⚠️&nbsp; | Birthdate field exists and web application ensures that user is over 15 years old. Nevertheless it does not explain the need of this data collection for user nor the need to be over 15 years old. |
 
 ---
 
 | **Result** | **User registration and management** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Does the registration form (page) include GDPR-compliant consent for processing<br> personal data (e.g., acceptance of the privacy policy)?|
-| &nbsp;✅/❌/⚠️&nbsp; | Can users view, edit, and delete their own personal data via their account? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a mechanism for the administrator to delete a reserver in<br> accordance with the "right to be forgotten"? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is underage registration (under 15 years) and booking functionality restricted? |
+| &nbsp;❌&nbsp; | The form only contains a checkboc for Terms of Service, but there is no information about the terms in link provided. Privacy Policy is missing and infomration about how personal data is processed is also missing. |
+| &nbsp;❌&nbsp; | User can only view own personal data, but cannot delete or edit it. |
+| &nbsp;❌&nbsp; | Administrator cannot delete reserver user. There is also no information what happens to the personal data if user could be deleted. |
+| &nbsp;✅&nbsp; | In registration birthdate is forced to be over 15 years. |
 
 ---
 
 | **Result** | **Booking visibility** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Are bookings visible to non-logged-in users only at the resource level<br> (without any personal data)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is it ensured that names, emails, or other personal data of bookers are not exposed<br> publicly or to unauthorized users? |
+| &nbsp;✅&nbsp; | Non-logged  users can see reservations without any personal data. |
+| &nbsp;⚠️&nbsp; | In application, personal data is not visible for anyone that is not authorized for that data. Explicits are not documented or this way guaranteed outside the application.  |
 
 --- 
 
 | **Result** | **Access control and authorization** |
 | :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is the system using role-based access control (e.g., reserver vs. administrator)? |
+| &nbsp;❌&nbsp; | Resources can be created by any user and reservations can be modified by any user, including other users than the reserver of the reservation. |
+| &nbsp;✅&nbsp; | Role-based access control is implemented. |
 | &nbsp;✅/❌/⚠️&nbsp; | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? |
 
 ---
