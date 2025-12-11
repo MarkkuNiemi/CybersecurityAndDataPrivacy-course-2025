@@ -21,3 +21,4 @@
 | 8.12.2025 | 2 | The Booking system project Phase 3  | Going through findings. Finishing authentication report and submitting the task |
 | 9.12.2025 | 3,5 | Portswigger | Getting familiar with topics CSRF and Access control. Done 4 labs considering these topics |
 | 10.12.2025 | 2,5 | Portswigger | Getting familiar with topic XSS. Done 4 labs considering this topic |
+| 11.12.2025 | 5 | Booking System Phase 4 | Getting familiar with topic. Done Phase 4 task and submitted it. |
