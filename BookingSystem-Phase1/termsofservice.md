@@ -1,4 +1,4 @@
-# Terms of Service – Booking System
+# Terms of Service – Booking System (Provided with ChatGPT, but manually inspected)
 
 These Terms of Service govern the use of the Booking System application in this educational environment. By creating an account and using the service, the user agrees to the following terms.
 
