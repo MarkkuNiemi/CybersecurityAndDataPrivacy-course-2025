@@ -1,4 +1,4 @@
-# Cookie Policy – Booking System 
+# Cookie Policy – Booking System (Provided with ChatGPT, but manually inspected)
 
 This Cookie Policy explains how the Booking System uses cookies in accordance with GDPR and common best practices.
 
