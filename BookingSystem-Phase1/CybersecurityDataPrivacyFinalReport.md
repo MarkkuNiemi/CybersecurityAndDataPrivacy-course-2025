@@ -85,7 +85,21 @@ Evaluating GDPR recommendations trhough UI and backend logs/SQL.
 I learned that GDPR  is not only about having a correct policies, but also about how the system is technically designed. Data protection is better to be build in system from the start rather than beginning to implement it afterwards.
 
 ### Overall Reflection
+During this course, I learned how real world web application security testing is performed in an iterative and systematic way. I gained practical experience with manual testing, automated tools such as OWASP ZAP, and authorization testing across different user roles. The project demonstrated how critical backend validation and access control are, especially when preventing issues like IDOR and privilege escalation. GDDPR phase was also educational about how closely connected security and privacy are connected. Also POrtswigger enviroment was/is really good place to get knowledge considering cybersecurity field and I will be continuing to pass those labs even after the course. Overall, the course significantly improved my understanding of both technical and regulatory aspects of cybersecurity.
 
 ## Logbook
+🔗 **Logbook:**  
+[Logbook (README.md)](https://github.com/MarkkuNiemi/CybersecurityAndDataPrivacy-course-2025#logbook)
 
-## Feedback
+### Total hours
+71,5h
+
+### Hours per topic
+- Cisco course: 8,5h
+- Portswigger: roughly 16h
+- Phase 1: 18,5h
+- Phase 2: 6,5h
+- Phase 3: 11,5h
+- Phase 4: 5h
+- Other: 5,5
+
