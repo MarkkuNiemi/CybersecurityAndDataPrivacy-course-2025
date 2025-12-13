@@ -61,7 +61,28 @@ Password cracking and documenting the process step by step, including validating
 I learned how attackers can exploit weak password practices and why proper hashing, salting, and password policies are critical. I also gained a better understanding of the difference between dictionary-based and non-dictionary attacks, and how access to a database significantly increases an attacker’s capabilities.
 
 ### Phase 3
+In Phase 3, the focus was on authorization testing of the Booking System -web application. The goal was to verify that access control is correctly enforced for all user roles (Guest, Reserver, and Administrator). There were given specific specifications and functionality was tested keeping these in mind. Testing was performed using browser baed testing, API request manipulation, OWASP ZAP scan and endpoint discovery with Gobuster and Wfuzz. All accessible pages, functions, and API endpoints were tested for each role.
+
+#### What worked / didin't work
+Role-based testing clearly exposed authorization weaknesses that were not visible in earlier phases. However, the lack of proper HTTP error codes (missing 404 responses) limited the effectiveness of fuzzing tools and required more manual verification.
+
+#### What took the most time
+Systematic testing of all roles across UI and API endpoints, as well as verifying backend authorization independently of frontend behavior.
+
+#### What I learned
+I lerned how critical a proper backend authorization checks are and how easily easily severe vulnerabilities can occur if access controlis not enforced properly (such as IDOR).
+
 ### Phase 4
+Phase 4 focused on GDPR compliance in the Booking System application. The goal was to evaluate how personal data is collected, processed, stored, dossclosed and how these were documented and shoen to the user. GDPR checklist was completede evaluating these things and proper Privacy Policy ,Terms of Servuce and Cookie Policy documetns were made for the application.
+
+#### What worked / didin't work
+Structured GDPR checklist helped to systematically evaluate Booking System application from GDPR perspective.
+
+#### What took the most time
+Evaluating GDPR recommendations trhough UI and backend logs/SQL.
+
+#### What I learned
+I learned that GDPR  is not only about having a correct policies, but also about how the system is technically designed. Data protection is better to be build in system from the start rather than beginning to implement it afterwards.
 
 ### Overall Reflection
 
