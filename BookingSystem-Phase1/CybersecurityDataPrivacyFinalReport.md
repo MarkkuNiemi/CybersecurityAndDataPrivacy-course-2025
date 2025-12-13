@@ -32,7 +32,29 @@
 ## The Booking System Project
 
 ### Phase 1
+In Phase 1, the purpose was to evaluate The Booking System -web applications user rgistration functionality. The testing was conducted using gray-box approach in a local Docker-based enviroment. Testing was done with manual tests and with automated OWASP ZAP scan. These were used to evaluate input validation, error handling, role assignment, password handling and backend behaviour during account creation. Database and container logs were also used to support the analysis.
+
+#### What worked / didin't work
+MAnual testing and ZAP scan provided a good overview of critical weaknesses early in the project.
+
+#### What took the most time
+Setting up the setup wit docker/debian, conducting manual tests and analyzing server errors, database behaviour.
+
+#### What I learned
+I learned how complex even basic functionality like registration can be in sense of cybersecurity. Lots of ways to tests vulnerabilities.
+
+
 ### Phase 2
+
+#### What worked / didin't work
+
+
+#### What took the most time
+
+
+#### What I learned
+
+
 ### Phase 3
 ### Phase 4
 
