@@ -47,15 +47,18 @@ I learned how complex even basic functionality like registration can be in sense
 
 
 ### Phase 2
+In Phase 2, the Booking System application was tested again using an updated version of the system. The testing followed the same methodology as in Phase 1, including both manual testing and automated OWASP ZAP scanning.
+
+In addition to general security testing, Phase 2 focused on password security an d cracking methods. Multiple password hashes were cracked following course material which included hints and guides for this. The cracking process, tools used, and results were documented.
 
 #### What worked / didin't work
-
+Repeating the tests made it easier to identify changes between application versions and to verify whether previous issues had been mitigated. Password cracking exercises clearly demonstrated the weaknesses of poor password handling. Some automated findings still required manual verification to determine their actual impact.
 
 #### What took the most time
-
+Password cracking and documenting the process step by step, including validating results and capturing evidence.
 
 #### What I learned
-
+I learned how attackers can exploit weak password practices and why proper hashing, salting, and password policies are critical. I also gained a better understanding of the difference between dictionary-based and non-dictionary attacks, and how access to a database significantly increases an attacker’s capabilities.
 
 ### Phase 3
 ### Phase 4
