@@ -41,7 +41,7 @@ MAnual testing and ZAP scan provided a good overview of critical weaknesses earl
 Setting up the setup wit docker/debian, conducting manual tests and analyzing server errors, database behaviour.
 
 #### What I learned
-I learned how complex even basic functionality like registration can be in sense of cybersecurity. Lots of ways to tests vulnerabilities.
+I learned how complex even basic functionality like registration can be in sense of cybersecurity. Also lots of ways to tests vulnerabilities and to evaluete the risk of these vulnerabilities.
 
 
 ### Phase 2
