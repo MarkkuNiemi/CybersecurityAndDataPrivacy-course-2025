@@ -34,6 +34,8 @@
 ### Phase 1
 In Phase 1, the purpose was to evaluate The Booking System -web applications user rgistration functionality. The testing was conducted using gray-box approach in a local Docker-based enviroment. Testing was done with manual tests and with automated OWASP ZAP scan. These were used to evaluate input validation, error handling, role assignment, password handling and backend behaviour during account creation. Database and container logs were also used to support the analysis.
 
+As part of Phase 1, the testing was repeated on an updated version of the application (Part 2). Previously identified findings were re-tested to verify whether fixes had been applied. A second OWASP ZAP scan was performed, and the results were documented in a separate report.
+
 #### What worked / didin't work
 MAnual testing and ZAP scan provided a good overview of critical weaknesses early in the project.
 
